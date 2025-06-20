@@ -51,6 +51,6 @@ public class Account {
 
     public void withdraw(double withdraw){
         this.balance -= withdraw;
-    }
+    }   
 
 }
