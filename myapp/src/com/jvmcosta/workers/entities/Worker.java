@@ -14,8 +14,62 @@ public class Worker {
 
     private List<HourContract> contracts = new ArrayList<>();
 
-    //addContract
+    public Worker(){}
 
-    //removeContract
-    //Income
+    public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
+        this.name = name;
+        this.level = level;
+        this.baseSalary = baseSalary;
+        this.department = department;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public WorkerLevel getLevel() {
+        return level;
+    }
+
+    public Double getBaseSalary() {
+        return baseSalary;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public List<HourContract> getContracts() {
+        return contracts;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLevel(WorkerLevel level) {
+        this.level = level;
+    }
+
+    public void setBaseSalary(Double baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public void addContract(HourContract hourContract){
+        contracts.add(hourContract);
+    }
+
+    public void removeContract(HourContract hourContract){
+        contracts.remove(hourContract);
+    }
+
+    public Double income(int year, int month){
+        double contractsIncome = contracts.stream().filter(c -> c.getDate().getYear()==year && c.getDate().getMonthValue()==month).mapToDouble(HourContract::totalValue).sum();
+
+        return baseSalary + contractsIncome;
+    }
 }
