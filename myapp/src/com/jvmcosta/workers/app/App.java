@@ -22,7 +22,7 @@ public class App {
         double baseSalary = sc.nextDouble();
         sc.nextLine();
 
-        worker = new Worker(name, WorkerLevel.valueOf(level), baseSalary, new Department(department));
+        worker = new Worker(name, WorkerLevel.valueOf(level), baseSalary, worker.setDepartment(department));
         sc.close();
     }
 }
