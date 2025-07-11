@@ -55,8 +55,8 @@ public class Worker {
         this.baseSalary = baseSalary;
     }
 
-    public void setDepartment(Department department) {
-        this.department = department;
+    public void setDepartment(String department) {
+        this.department = new Department(department);
     }
 
     public void addContract(HourContract hourContract){
