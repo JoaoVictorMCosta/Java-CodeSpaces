@@ -36,8 +36,8 @@ public class Worker {
         return baseSalary;
     }
 
-    public Department getDepartment() {
-        return department;
+    public String getDepartment() {
+        return department.getName();
     }
 
     public List<HourContract> getContracts() {

@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-import com.jvmcosta.workers.entities.Department;
+import com.jvmcosta.workers.entities.HourContract;
 import com.jvmcosta.workers.entities.Worker;
 import com.jvmcosta.workers.entities.enums.WorkerLevel;
 
@@ -41,14 +41,16 @@ public class App {
             System.out.print("Duration (hours): ");
             int hours = sc.nextInt();
             sc.nextLine();
+            worker.addContract(new HourContract(date, valuePerHour, hours));
         }
 
         System.out.print("Enter month and year to calculate income (MM/YYYY): ");
         String incomeDate = sc.nextLine();
         int month = Integer.parseInt(incomeDate.substring(0, 2));
         int year = Integer.parseInt(incomeDate.substring(3, 7));
-
-        System.out.println(worker.income(year, month));
+        System.out.println("Name: "+worker.getName());
+        System.out.println("Department: "+worker.getDepartment());
+        System.out.println("Income for "+incomeDate+": "+worker.income(year, month));
         sc.close();
     }
 }
