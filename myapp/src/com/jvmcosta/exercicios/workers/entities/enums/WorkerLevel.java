@@ -1,4 +1,4 @@
-package com.jvmcosta.workers.entities.enums;
+package com.jvmcosta.exercicios.workers.entities.enums;
 
 public enum WorkerLevel {
     JUNIOR,

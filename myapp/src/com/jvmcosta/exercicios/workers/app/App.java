@@ -1,12 +1,12 @@
-package com.jvmcosta.workers.app;
+package com.jvmcosta.exercicios.workers.app;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-import com.jvmcosta.workers.entities.HourContract;
-import com.jvmcosta.workers.entities.Worker;
-import com.jvmcosta.workers.entities.enums.WorkerLevel;
+import com.jvmcosta.exercicios.workers.entities.HourContract;
+import com.jvmcosta.exercicios.workers.entities.Worker;
+import com.jvmcosta.exercicios.workers.entities.enums.WorkerLevel;
 
 public class App {
     public static void main(String[] args) {

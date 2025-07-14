@@ -1,4 +1,4 @@
-package com.jvmcosta.workers.entities;
+package com.jvmcosta.exercicios.workers.entities;
 
 public class Department {
     private String name;

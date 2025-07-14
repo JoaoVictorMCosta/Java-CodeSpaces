@@ -1,9 +1,9 @@
-package com.jvmcosta.workers.entities;
+package com.jvmcosta.exercicios.workers.entities;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jvmcosta.workers.entities.enums.WorkerLevel;
+import com.jvmcosta.exercicios.workers.entities.enums.WorkerLevel;
 
 public class Worker {
     private String name;
