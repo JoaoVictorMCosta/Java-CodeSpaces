@@ -62,6 +62,18 @@ public class Post {
         this.likes+=1;
     }
 
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(title).append(System.lineSeparator());
+        sb.append(likes+" Likes - "+moment).append(System.lineSeparator());
+        sb.append(content).append(System.lineSeparator());
+        sb.append("Comments:").append(System.lineSeparator());
+        for (Comment comment : comments) {
+            sb.append(comment.getText()).append(System.lineSeparator());
+        }
+
+        return sb.toString();
+    }
     
 
 }
