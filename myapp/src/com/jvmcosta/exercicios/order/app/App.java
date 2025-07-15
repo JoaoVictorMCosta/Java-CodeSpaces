@@ -1,7 +1,6 @@
 package com.jvmcosta.exercicios.order.app;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import com.jvmcosta.entities.enums.OrderStatus;
@@ -13,7 +12,6 @@ import com.jvmcosta.exercicios.order.entities.Product;
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         System.out.println("Enter client data:");
         System.out.print("Name: ");
