@@ -48,6 +48,7 @@ public class App {
         System.out.println("ORDER SUMARY:");
         System.out.println();
         
+        System.out.println(order.toString());
 
         sc.close();
     }

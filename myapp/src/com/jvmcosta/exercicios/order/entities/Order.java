@@ -14,7 +14,7 @@ public class Order {
 
     private List<OrderItem> orderItem = new ArrayList<>();
 
-    public Order(LocalDate moment, OrderStatus status, Client client){
+    public Order(LocalDate moment, OrderStatus status, Client client) {
         this.moment = moment;
         this.status = status;
         this.client = client;
@@ -43,20 +43,20 @@ public class Order {
     public void setClient(Client client) {
         this.client = client;
     }
-    
+
     public List<OrderItem> getOrderItem() {
         return orderItem;
     }
-    
-    public void addItem(OrderItem item){
+
+    public void addItem(OrderItem item) {
         orderItem.add(item);
     }
 
-    public void removeItem(OrderItem item){
+    public void removeItem(OrderItem item) {
         orderItem.remove(item);
     }
 
-    public double total(){
+    public double total() {
         double sum = 0;
         for (OrderItem orderItem : orderItem) {
             sum += orderItem.subTotal();
@@ -64,5 +64,12 @@ public class Order {
         return sum;
     }
 
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(moment + ", " + status + ", " + client);
+
+        return sb.toString();
+    }
 
 }

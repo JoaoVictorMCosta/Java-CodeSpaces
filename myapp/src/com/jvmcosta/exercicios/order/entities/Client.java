@@ -42,5 +42,8 @@ public class Client {
         this.birthDate = birthDate;
     }
 
-    
+    public String toString() {
+        return name + ", " + email + ", " + birthDate;
+    }
+
 }
